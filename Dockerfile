@@ -1,4 +1,4 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-node:8
+FROM resin/raspberrypi3-node:9
 
 RUN apt-get update && apt-get install -yq \
     bluetooth bluez libbluetooth-dev libudev-dev && \
@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY package.json package.json
 
-RUN JOBS=MAX npm install --production --unsafe-perm && npm cache clean && rm -rf /tmp/*
+RUN JOBS=MAX npm install --production --unsafe-perm 
 
 COPY . ./
 
