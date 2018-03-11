@@ -1,12 +1,15 @@
 const { GraphQLServer, PubSub } = require('graphql-yoga')
-const typeDefs = require('./typeDefs')
-const resolvers = require('./resolvers')
+const ble = require('./ble')
 const PORT = process.env.PORT || 4000
+
+const { prepare } = require('@gramps/gramps')
+
+// merge all data sources to a single schema
+const opts = prepare({ dataSources: [ble] })
 
 const pubsub = new PubSub()
 const server = new GraphQLServer({
-  typeDefs,
-  resolvers,
+  ...opts,
   context: ({ request, connection }) => ({
     request,
     connection,

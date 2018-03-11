@@ -1,4 +1,4 @@
-const Peripherals = require('./ble/peripherals')
+const Peripherals = require('./peripherals')
 
 module.exports = {
   Query: {
