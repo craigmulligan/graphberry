@@ -5,7 +5,6 @@ module.exports = {
     networks: (_, { interface = 'wlan0' }) => {
       return new Promise((resolve, reject) => {
         iwlist.scan(interface, (err, networks) => {
-          console.log({ networks })
           resolve(networks)
         })
       })
