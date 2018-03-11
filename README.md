@@ -1,4 +1,4 @@
-# Graphberry
+# 📈 Graphberry 🍇
 
 > A graphql server for interacting with hardware
 
@@ -20,5 +20,5 @@ I intially just built this to learn more about graphql subscriptions and graphql
 ## Docs
 
 ```
-comming soon!
+coming soon!
 ```
