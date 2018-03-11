@@ -9,6 +9,13 @@
     core-js "^2.5.3"
     regenerator-runtime "^0.11.1"
 
+"@gramps/gramps@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@gramps/gramps/-/gramps-1.4.0.tgz#e8200a26817d2db7f5104999cb120759515c39c7"
+  dependencies:
+    chalk "^2.1.0"
+    graphql-tools "^2.20.2"
+
 "@types/body-parser@*":
   version "1.16.8"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.8.tgz#687ec34140624a3bec2b1a8ea9268478ae8f3be3"
@@ -427,7 +434,7 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-chalk@^2.0.1:
+chalk@^2.0.1, chalk@^2.1.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.2.tgz#250dc96b07491bfd601e648d66ddf5f60c7a5c65"
   dependencies:
@@ -1048,7 +1055,7 @@ graphql-subscriptions@^0.5.8:
   dependencies:
     iterall "^1.2.1"
 
-graphql-tools@^2.18.0:
+graphql-tools@^2.18.0, graphql-tools@^2.20.2:
   version "2.21.0"
   resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-2.21.0.tgz#c0d0fbda6f40a87c8d267a2989ade2ae8b9a288e"
   dependencies:
