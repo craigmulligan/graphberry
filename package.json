@@ -10,7 +10,8 @@
     "@gramps/gramps": "^1.4.0",
     "graphql-yoga": "^1.5.0",
     "noble": "^1.9.0",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "wireless-tools": "^0.19.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.1"

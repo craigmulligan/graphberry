@@ -1,11 +1,13 @@
 const { GraphQLServer, PubSub } = require('graphql-yoga')
 const ble = require('./ble')
+const wireless = require('./wireless-tools')
+
 const PORT = process.env.PORT || 4000
 
 const { prepare } = require('@gramps/gramps')
 
 // merge all data sources to a single schema
-const opts = prepare({ dataSources: [ble] })
+const opts = prepare({ dataSources: [ble, wireless] })
 
 const pubsub = new PubSub()
 const server = new GraphQLServer({
