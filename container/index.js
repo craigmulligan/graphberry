@@ -1,5 +1,6 @@
-const server = require('./packages/graphberry')
+const server = require('graphberry')
 const options = {
   port: 5000,
 }
+
 server({ options })

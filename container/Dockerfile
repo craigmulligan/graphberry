@@ -1,8 +1,6 @@
 FROM resin/raspberrypi3-node:9
 
-RUN apt-get update && apt-get install -yq \
-    bluetooth bluez libbluetooth-dev libudev-dev && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
 
 WORKDIR /usr/src/app
 

@@ -6,8 +6,6 @@
   "dependencies": {
     "@gramps/gramps": "^1.4.0",
     "glob": "^7.1.2",
-    "graphql-yoga": "^1.5.0",
-    "graphberry-ble": "0.0.0",
-    "graphberry-wireless-tools": "0.0.0"
+    "graphql-yoga": "^1.5.0"
   }
 }

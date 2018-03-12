@@ -2,6 +2,9 @@
   "name": "graphberry-ble",
   "version": "0.0.0",
   "author": "hobochild",
+  "scripts": {
+    "postinstall": "./postinstall.sh"
+  },
   "dependencies": {
     "@gramps/gramps": "^1.4.0",
     "glob": "^7.1.2",
