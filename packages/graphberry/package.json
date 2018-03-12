@@ -1,6 +1,6 @@
 {
   "name": "graphberry",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "hobochild",
   "main": "index.js",
   "dependencies": {
