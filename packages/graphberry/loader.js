@@ -1,4 +1,5 @@
 const glob = require('glob')
+const { resolve } = require('path')
 
 const getPaths = pattern => {
   return new Promise((resolve, reject) => {
@@ -13,7 +14,8 @@ const getPaths = pattern => {
 }
 
 module.exports = async () => {
-  const paths = await getPaths(`${__dirname}/node_modules/graphberry-*/`)
+  const dir = resolve()
+  const paths = await getPaths(`${dir}/node_modules/**/graphberry-*/`)
   return paths.map(require)
   // TODO do some validation on the plugins before returning they should satisfy gramps module model
 }

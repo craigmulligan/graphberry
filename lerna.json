@@ -1,6 +1,8 @@
 {
   "lerna": "2.9.0",
+  "publish": {
+    "ignore": ["packages/container"]
+  },
   "packages": ["packages/*"],
-  "version": "independent",
-  "npmClient": "yarn"
+  "version": "independent"
 }

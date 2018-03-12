@@ -1,6 +1,6 @@
 FROM resin/raspberrypi3-node:9
 
-RUN apt-get update 
+RUN apt-get update
 
 WORKDIR /usr/src/app
 
