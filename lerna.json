@@ -1,8 +1,5 @@
 {
   "lerna": "2.9.0",
-  "publish": {
-    "ignore": ["packages/container"]
-  },
-  "packages": ["packages/*"],
+  "packages": ["packages/graphberry*"],
   "version": "independent"
 }
