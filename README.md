@@ -1,5 +1,7 @@
 # 📈 Graphberry 🍇
 
+[![CircleCI](https://circleci.com/gh/hobochild/graphberry.svg?style=svg)](https://circleci.com/gh/hobochild/graphberry)
+
 > A graphql server for interacting with hardware
 
 # Why?
