@@ -8,7 +8,7 @@
     "dev": "nodemon --inspect index"
   },
   "dependencies": {
-    "graphberry": "0.0.1",
+    "graphberry": "0.0.2",
     "graphberry-ble": "0.0.1",
     "graphberry-wireless-tools": "0.0.1"
   }
