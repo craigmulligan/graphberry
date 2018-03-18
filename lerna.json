@@ -1,5 +1,5 @@
 {
   "lerna": "2.9.0",
-  "packages": ["packages/graphberry*"],
+  "packages": ["packages/*"],
   "version": "independent"
 }

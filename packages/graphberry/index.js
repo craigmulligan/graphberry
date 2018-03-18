@@ -2,7 +2,7 @@ const { GraphQLServer, PubSub } = require('graphql-yoga')
 const { prepare } = require('@gramps/gramps')
 const loader = require('./loader')
 
-module.exports = async ({ dataSources = [], options = {} } = {}) => {
+module.exports = async ({ dataSources = [], options = {} } = {}, cb) => {
   const sources = await loader()
 
   // merge all data sources to a single schema
@@ -21,7 +21,7 @@ module.exports = async ({ dataSources = [], options = {} } = {}) => {
     }),
   })
 
-  server.start(
+  const httpServer = server.start(
     {
       subscriptions: {
         onConnect: (connectionParams, websocket) => {
@@ -32,6 +32,11 @@ module.exports = async ({ dataSources = [], options = {} } = {}) => {
       },
       ...options,
     },
-    ({ port }) => console.log(`Server is running on localhost:${port}`),
+    cb,
   )
+
+  return {
+    ...server,
+    httpServer,
+  }
 }
