@@ -11,5 +11,7 @@
     "graphberry": "^0.0.3",
     "graphberry-ble": "0.0.1",
     "graphberry-wireless-tools": "0.0.1"
-  }
+  },
+  "license":"MIT"
+
 }

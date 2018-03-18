@@ -9,5 +9,6 @@
   "devDependencies": {
     "lerna": "^2.9.0",
     "nodemon": "^1.17.1"
-  }
+  },
+  "license": "MIT"
 }
