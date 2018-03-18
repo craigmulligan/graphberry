@@ -1,6 +1,6 @@
 {
   "name": "container",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "hobochild",
   "private": true,
   "scripts": {
@@ -9,9 +9,8 @@
   },
   "dependencies": {
     "graphberry": "^0.0.3",
-    "graphberry-ble": "0.0.1",
-    "graphberry-wireless-tools": "0.0.1"
+    "graphberry-ble": "^0.0.2",
+    "graphberry-wireless-tools": "^0.0.2"
   },
-  "license":"MIT"
-
+  "license": "MIT"
 }
