@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "author": "hobochild",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon --inspect index"
+    "bootstrap": "yarn lerna bootstrap",
+    "dev": "yarn lerna run dev --parallel --scope graphberry-server"
   },
   "devDependencies": {
     "lerna": "^2.9.0",

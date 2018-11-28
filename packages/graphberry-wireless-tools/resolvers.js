@@ -2,9 +2,9 @@ const iwlist = require('wireless-tools/iwlist')
 
 module.exports = {
   Query: {
-    networks: (_, { interface = 'wlan0' }) => {
+    networks: (_, { iface }) => {
       return new Promise((resolve, reject) => {
-        iwlist.scan(interface, (err, networks) => {
+        iwlist.scan(iface || 'wlan0', (err, networks) => {
           resolve(networks)
         })
       })

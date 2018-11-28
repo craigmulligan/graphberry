@@ -11,6 +11,6 @@ module.exports = `
   }
 
   type Query {
-    networks(interface: String): [Network]
+    networks(iface: String): [Network]
   }
 `
