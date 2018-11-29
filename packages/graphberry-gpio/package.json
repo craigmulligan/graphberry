@@ -1,0 +1,9 @@
+{
+  "name": "graphberry-gpio",
+  "version": "0.0.1",
+  "author": "hobochild",
+  "dependencies": {
+    "rpio": "^1.0.11"
+  },
+  "license": "MIT"
+}
