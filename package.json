@@ -7,7 +7,7 @@
     "dev": "yarn lerna run dev --parallel --scope graphberry-server"
   },
   "devDependencies": {
-    "lerna": "^3.16.4",
+    "lerna": "^2.11.0",
     "nodemon": "^1.19.3"
   },
   "license": "MIT",
