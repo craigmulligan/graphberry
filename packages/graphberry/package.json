@@ -1,9 +1,8 @@
 {
   "name": "graphberry",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "hobochild",
   "main": "index.js",
-  
   "dependencies": {
     "@gramps/gramps": "^3.2.1",
     "apollo-server": "^2.9.4",
