@@ -8,6 +8,7 @@ module.exports = {
   resolvers,
   context: ctx => {
     rpio.init()
+
     return {
       ...ctx,
       rpio,

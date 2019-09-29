@@ -1,6 +1,7 @@
-const { ApolloServer } = require('apollo-server')
+const { ApolloServer, PubSub } = require('apollo-server')
 const gramps = require('@gramps/gramps').default
 const loader = require('./loader')
+const pubsub = new PubSub()
 
 module.exports = async (dataSources = []) => {
   const sources = await loader()
@@ -12,10 +13,10 @@ module.exports = async (dataSources = []) => {
       addMockFunctionsToSchema: {
         preserveResolvers: false,
       },
-      formatError: err => {
-        return formatError()(deserializeError(err))
-      },
       tracing: true,
+      context: {
+        pubsub,
+      },
     },
   })
 

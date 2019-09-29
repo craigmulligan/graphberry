@@ -4,7 +4,7 @@
 
 > A graphql server for interacting with hardware
 
-**NOTE** Warning: This project is in it's early stages. APIs are likely to break.
+**Warning**: This project is in it's early stages. APIs are likely to break.
 
 # Features
 
