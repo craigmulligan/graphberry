@@ -1,7 +1,6 @@
-const { ApolloServer, PubSub } = require('apollo-server')
+const { ApolloServer } = require('apollo-server')
 const gramps = require('@gramps/gramps').default
 const loader = require('./loader')
-const pubsub = new PubSub()
 
 module.exports = async (dataSources = []) => {
   const sources = await loader()
@@ -14,9 +13,6 @@ module.exports = async (dataSources = []) => {
         preserveResolvers: false,
       },
       tracing: true,
-      context: {
-        pubsub,
-      },
     },
   })
 
