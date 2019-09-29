@@ -5,13 +5,11 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon --inspect index"
+    "dev": "nodemon --inspect --watch ../ index"
   },
   "dependencies": {
-    "graphberry": "^0.0.3",
-    "graphberry-ble": "^0.0.2",
-    "graphberry-gpio": "^0.0.2",
-    "graphberry-wireless-tools": "^0.0.4"
+    "graphberry": "file:../graphberry",
+    "graphberry-gpio": "file:../graphberry-gpio"
   },
   "license": "MIT"
 }

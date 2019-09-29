@@ -1,8 +1,8 @@
-const server = require('graphberry')
-const options = {
-  port: process.env.PORT || 5000,
-}
+const createServer = require('graphberry')
+;(async () => {
+  const server = await createServer()
 
-const s = server({ options }, ({ port }) =>
-  console.log(`Your server is up on localhost:${5000}`),
-)
+  server.listen().then(({ url }) => {
+    console.log(`🚀  Server ready at ${url}`)
+  })
+})()

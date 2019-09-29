@@ -1,6 +1,3 @@
-const rpio = require('rpio')
-rpio.init()
-
 const LOW = 'LOW'
 const HIGH = 'HIGH'
 
@@ -13,17 +10,16 @@ module.exports = {
     },
   },
   Pin: {
-    value: ({ id }) => {
-      console.log(rpio.read(id))
+    value: ({ id }, _, { rpio }) => {
       return rpio.read(id) ? HIGH : LOW
     },
   },
   PinOps: {
-    write: ({ id }, { value }) => {
+    write: ({ id }, { value }, { rpio }) => {
       rpio.write(id, rpio[value])
       return { id }
     },
-    configure: ({ id }, { mode, value }) => {
+    configure: ({ id }, { mode }, rpio) => {
       rpio.open(id, rpio[mode], rpio[value])
       return { id }
     },

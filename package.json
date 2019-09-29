@@ -7,8 +7,14 @@
     "dev": "yarn lerna run dev --parallel --scope graphberry-server"
   },
   "devDependencies": {
-    "lerna": "^3.5.0",
-    "nodemon": "^1.17.1"
+    "lerna": "^3.16.4",
+    "nodemon": "^1.19.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphberry": "file:packages/graphberry",
+    "graphberry-gpio": "file:packages/graphberry-gpio",
+    "graphberry-server": "file:packages/graphberry-server",
+    "graphberry-wireless-tools": "file:packages/graphberry-wireless-tools"
+  }
 }

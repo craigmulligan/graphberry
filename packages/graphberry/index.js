@@ -1,42 +1,23 @@
-const { GraphQLServer, PubSub } = require('graphql-yoga')
-const { prepare } = require('@gramps/gramps')
+const { ApolloServer } = require('apollo-server')
+const gramps = require('@gramps/gramps').default
 const loader = require('./loader')
 
-module.exports = async ({ dataSources = [], options = {} } = {}, cb) => {
+module.exports = async (dataSources = []) => {
   const sources = await loader()
 
-  // merge all data sources to a single schema
-  const opts = prepare({
+  const opts = await gramps({
     dataSources: [...sources, ...dataSources],
-  })
-
-  const pubsub = new PubSub()
-
-  const server = new GraphQLServer({
-    ...opts,
-    context: ({ request, connection }) => ({
-      request,
-      connection,
-      pubsub,
-    }),
-  })
-
-  const httpServer = server.start(
-    {
-      subscriptions: {
-        onConnect: (connectionParams, websocket) => {
-          return {
-            websocket,
-          }
-        },
+    enableMockData: false,
+    apollo: {
+      addMockFunctionsToSchema: {
+        preserveResolvers: false,
       },
-      ...options,
+      formatError: err => {
+        return formatError()(deserializeError(err))
+      },
+      tracing: true,
     },
-    cb,
-  )
+  })
 
-  return {
-    ...server,
-    httpServer,
-  }
+  return new ApolloServer(opts)
 }

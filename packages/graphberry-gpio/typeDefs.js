@@ -12,8 +12,8 @@ module.exports = `
   }
 
   type Pin {
-    id: Int
-    value: PinValue
+    id: Int!
+    value: PinValue!
   }
    
   type Query {
