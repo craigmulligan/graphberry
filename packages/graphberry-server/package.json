@@ -11,5 +11,8 @@
     "graphberry": "^0.0.4",
     "graphberry-gpio": "^0.0.3"
   },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
   "license": "MIT"
 }
