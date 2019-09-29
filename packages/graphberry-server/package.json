@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "graphberry": "^0.0.5",
-    "graphberry-gpio": "^0.0.4"
+    "graphberry-gpio": "^0.0.5"
   },
   "devDependencies": {
     "nodemon": "^1.19.3"
