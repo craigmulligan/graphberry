@@ -8,8 +8,8 @@
     "dev": "nodemon --inspect --watch ../ index"
   },
   "dependencies": {
-    "graphberry": "file:../graphberry",
-    "graphberry-gpio": "file:../graphberry-gpio"
+    "graphberry": "^0.0.4",
+    "graphberry-gpio": "^0.0.3"
   },
   "license": "MIT"
 }
