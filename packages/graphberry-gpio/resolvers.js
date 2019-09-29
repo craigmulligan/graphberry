@@ -29,6 +29,10 @@ module.exports = {
       rpio.pud(id, state)
       return { id }
     },
+    close: ({ id }, { option }, { rpio }) => {
+      rpio.close(id, `PIN_${option}`)
+      return { id }
+    },
   },
   Mutation: {
     pin: (_, { id }) => ({ id }),
@@ -44,7 +48,7 @@ module.exports = {
         } catch (err) {
           if (err.message.includes('is already listening for events')) {
             try {
-              gpio.rpio.close(id)
+              gpio.rpio.close(id, gpio.rpio.PIN_PRESERVE)
               gpio.rpio.poll(id, cb, state)
             } catch (err) {
               console.log(err)

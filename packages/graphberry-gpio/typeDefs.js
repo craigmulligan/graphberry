@@ -16,6 +16,11 @@ module.exports = `
     PULL_OFF
   }
 
+  enum CloseOption {
+    RESET 
+    PRESERVE 
+  }
+
   type Pin {
     id: Int!
     value: PinValue!
@@ -26,9 +31,14 @@ module.exports = `
   }
 
   type PinOps {
+    """Write new value to Pin"""
     write(value: PinValue!): Pin 
+    """Configure the Pin"""
     configure(mode: PinMode!, value: PinValue): Pin 
-    pud(state: PinState): Pin
+    """Configure the pins internal pullup or pulldown resistors"""
+    pud(state: PinState!): Pin
+    """Indicate that the pin will no longer be used, and clear any poll events associated with it."""
+    close(option: CloseOption = RESET): Pin
   }
 
   type Mutation {
@@ -36,6 +46,7 @@ module.exports = `
   }
 
   type Subscription {
-    poll(id: Int!): Pin 
+    """Poll for changes on Pin"""
+    poll(id: Int!): Pin
   }
 `
