@@ -1,0 +1,11 @@
+version: '2'
+services:
+  example:
+    build: ./example
+    network_mode: "host"
+  graphberry:
+    build: ./packages/graphberry-server
+    expose:
+        - "80"
+    privileged: true
+    network_mode: "host"

@@ -13,14 +13,20 @@
 1.  Language Agnostic - A library to interact with gpio/ble may not exist in your langauge of choice, say PHP, but this way you can write your business logic in php and then call the graphberry services over language agnostic transport `http` :)
 1.  Pluggable - Use the core plugins or easily create your own, using the [gramps](https://gramps.js.org/) format.
 
-## Getting Started
-
-```
-docker run hobochild/graphberry -p 4000
-```
-
 ## Docs
 
+Running with [Balena](https://www.balena.io/)
+
+Follow their [Getting Started](https://www.balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#introduction) to setup an account.
+
+Then push this repo to your applications remote:
+
 ```
-coming soon!
+git push balena master
 ```
+
+Visit: `<your-pi-ip-addr>` to see the interactive query playground.
+
+See [/example](/example) for example app source code.
+
+> More docs coming soon!
