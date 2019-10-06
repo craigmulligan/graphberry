@@ -47,6 +47,6 @@ module.exports = `
 
   type Subscription {
     """Poll for changes on Pin"""
-    poll(id: Int!): Pin
+    poll(id: Int!, state: PinState): Pin
   }
 `
