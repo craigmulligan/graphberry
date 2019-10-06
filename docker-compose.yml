@@ -1,0 +1,23 @@
+version: '2'
+services:
+  example:
+    build: ./example
+    networks:
+      - bridger
+    depends_on:
+      - graphberry 
+  graphberry:
+    build: ./packages/graphberry-server
+    expose:
+        - "80"
+    privileged: true
+    networks:
+      - hostr
+      - bridger
+
+
+networks:
+  hostr:
+    driver: host 
+  bridger:
+    driver: bridger
