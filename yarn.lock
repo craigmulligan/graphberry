@@ -1435,24 +1435,24 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.2.tgz#6f0952605d0140c1cfdb138ed005775b92d67b02"
   integrity sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==
 
-graphberry-gpio@^0.0.3, "graphberry-gpio@file:packages/graphberry-gpio":
-  version "0.0.3"
+graphberry-gpio@^0.0.5, "graphberry-gpio@file:packages/graphberry-gpio":
+  version "0.0.5"
   dependencies:
     rpio "^1.0.11"
 
 "graphberry-server@file:packages/graphberry-server":
   version "0.0.5"
   dependencies:
-    graphberry "^0.0.4"
-    graphberry-gpio "^0.0.3"
+    graphberry "^0.0.5"
+    graphberry-gpio "^0.0.5"
 
 "graphberry-wireless-tools@file:packages/graphberry-wireless-tools":
   version "0.0.4"
   dependencies:
     wireless-tools "^0.19.0"
 
-graphberry@^0.0.4, "graphberry@file:packages/graphberry":
-  version "0.0.4"
+graphberry@^0.0.5, "graphberry@file:packages/graphberry":
+  version "0.0.5"
   dependencies:
     "@gramps/gramps" "^3.2.1"
     apollo-server "^2.9.4"
@@ -2193,9 +2193,9 @@ object-keys@^1.0.12, object-keys@^1.1.1:
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
 object-path@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.4.tgz#370ae752fbf37de3ea70a861c23bba8915691949"
-  integrity sha1-NwrnUvvzfePqcKhhwju6iRVpGUk=
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.5.tgz#d4e3cf19601a5140a55a16ad712019a9c50b577a"
+  integrity sha512-jgSbThcoR/s+XumvGMTMf81QVBmah+/Q7K7YduKeKVWL7N111unR2d6pZZarSk6kY/caeNxUDyxOvMWyzoU2eg==
 
 object.getownpropertydescriptors@^2.0.3:
   version "2.0.3"
